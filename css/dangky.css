@@ -1,0 +1,53 @@
+.nen{
+    /* background-image:  url(https://bloganchoi.com/wp-content/uploads/2020/09/anh-bia-dep-16-1.jpg) ; */
+    background-color: rgb(242, 240, 237);
+    width: 100%;
+    height: 600px;
+    opacity: 0.9 ;
+    /* ảnh nền mờ */
+}
+.dktk{
+    color: rgb(76, 198, 180);
+    padding: 10px 40px;
+    border: 1px solid rgb(99, 162, 187);
+    border-radius: 25px;
+    background-color: rgb(27, 136, 158);
+    margin-top: 100px;
+    text-shadow: 2px 2px blue; 
+    /* bóng mờ */
+    letter-spacing: 1.5px;
+    /* khoảng cách kí tự */
+}
+.button{
+    text-align: center;
+}
+.giua{
+    text-align: center;  
+}
+.ctdn{
+    margin-top: 20px;
+    margin-bottom: 5px;  
+}
+.chonut{
+    margin-bottom: 5px;  
+}
+.dtd{
+    padding: 10px 50px;
+    border-radius: 5px;
+    border:1px solid rgb(149, 160, 160);
+}
+.dangky{
+    padding: 10px 40px;
+    border-radius: 5px;
+    border:1px solid rgb(149, 160, 160);   
+}
+input:hover{
+    border-color: blue;
+}
+input[class="dangky"]:hover{
+   background-color: rgb(16, 92, 92);
+}
+input{
+    border-color: green;
+}
+

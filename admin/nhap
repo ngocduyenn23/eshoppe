@@ -1,0 +1,67 @@
+ <?php
+				foreach ($data as $x) {
+					$img = upload($x["img"], true);					
+					$ten = $x["ten"];
+					$gia = $x["gia"];
+					$mota = $x["mota"];
+				
+					echo <<<EOL
+                    <div class="backgroundsp">
+                        <div class="sanpham">
+                           <img class="dtd" src="$img" alt="sản phẩm">
+                        </div>
+                        <h5>
+                            $ten
+                        </h5>
+                        <P class="spice">
+                           $gia
+                        </P>
+                        <h6>$mota</h6>
+                    </div>
+                    EOL;
+                }
+            ?>
+
+<body>
+    <h2>Đăng nhập</h2>
+
+
+    <form method="post">
+        <div>
+            <label class="dtd">Tên dăng nhập</label>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <label class="dtd">Mật khẩu</label>
+            <input type="password" name="password" minlength="4" required />
+        </div>
+        <div>
+            <input type="submit" value="Đăng nhập">
+        </div>
+
+    </form>
+
+</body>
+
+//xoa
+<?php
+include("../include/common.php");
+
+$id = $_GET["id"] ?? -1;
+
+$sql = "select *from ttsp where id=?"; //Xóa lớp có id = _____;
+// $sql = "delete from ttsp where id=?"; //Xóa lớp có id = _____;
+$data= db_execute($sql,[$id]);
+if(empty($data))
+{
+    js_alert("Khong co gi de xoa");
+    js_redirect_to("/");
+    die;
+
+}
+
+//xoa file trong anh
+remove_file($data["img"]); //==> Xoa anh db
+db_execute($sql, [$id]);
+js_alert("Xóa thành công");
+// js_redirect_to("/");
