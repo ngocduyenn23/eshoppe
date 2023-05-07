@@ -39,7 +39,6 @@ if (is_method_get()) {
 		db_execute($sql1, $params1);
 		js_redirect_to("/"); 
 	}
-
 }
 
 $_title = "Edit product information";
